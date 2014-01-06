@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Rex ZPilot</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <h1>REX ZPilot</h1>
+
+            <h3>Un jeu présenté lors du DevFest 2013 pour Zenika</h3>
+
+            <p>
+                <small>Réalisé par Manuel Boillod, Pierre Reliquet et Germain Potet</small>
+            </p>
+        </section>
+        <section>
+            <section>
+                <img style=" width:400px;border:0;box-shadox:0" src="images/logo.png"/>
+
+                <h2>Qu'est ce que ZPilot?</h2>
+            </section>
+            <section>
+                <h2>Caractéristiques</h2>
+                <ul>
+                    <li>Asteroid-like game</li>
+                    <li>De multiples cartes à bords finis</li>
+                    <li>Un nombre de joueurs limité par serveur</li>
+                </ul>
+            </section>
+            <section>
+                <p>Un jeu de vaisseau basé sur <a href="https://github.com/jfd/wpilot">WPilot@JFD</a></p>
+                <img style=" width:800px;border:0;box-shadox:0" src="images/zpilot-game-small.png"/>
+            </section>
+            <section>
+                <h2>Techno utilisées</h2>
+                <ul>
+                    <li>HTML5</li>
+                    <li>NodeJS</li>
+                    <li>WebSockets</li>
+                    <li>Canvas</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2> Améliorations apportées par <b>Z</b>Pilot</h2>
+            </section>
+            <section>
+                <h2> Classification par catégorie </h2>
+                <img style=" width:800px;border:0;box-shadox:0" src="images/accueil.png"/>
+            </section>
+            <section>
+                <h2>Support touch</h2>
+                <img style=" width:600px;border:0;box-shadox:0" src="images/joypad_small.png"/>
+            </section>
+            <section>
+                <h2>Nouveaux évènements</h2>
+
+                <p>Différenciation des meurtres par bouclier / par rocket / par suicide</p>
+            </section>
+            <section>
+                <h2>Hub de serveurs</h2>
+                <img style=" width:600px;border:0;box-shadox:0" src="images/zpilot-hub_t.jpg"/>
+            </section>
+            <section>
+                <h2>Techno utilisées</h2>
+                <ul>
+                    <li>Encore des WebSockets!</li>
+                    <li>Libcouchbase - Driver Couchbase NodeJS</li>
+                    <li>CouchBase - Stockage de tous les évènements</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Stats Client : un tableau de bord de suivi du jeu</h2>
+                <img style=" width:800px;border:0;box-shadox:0" src="images/results_m.jpg"/>
+            </section>
+            <section>
+                <h2>Fonctionnalitées</h2>
+                <ul>
+                    <li>Suivi en temps réél de l'activité</li>
+                    <li>Nombre de tirs</li>
+                    <li>Nombre de meutres</li>
+                    <li>Classement général de joueurs</li>
+                    <li>Evènements</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Et tout ça contextualisable:</h2>
+                <ul>
+                    <li>Par serveur</li>
+                    <li>Par joueur</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Techno utilisées</h2>
+                <ul>
+                    <li>AngularJS</li>
+                    <li>ElasticSearch</li>
+                    <li>Bootstrap3</li>
+                    <li>nvd3</li>
+                    <li>d3.js</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>How is everything connected?</h1>
+            </section>
+            <section> <!-- Pas mal d'oral ici -->
+                <h2>Architecture</h2>
+                <img src="images/archi_m.jpg">
+            </section>
+
+            <section>
+                <h2>Déploiement</h2>
+                <img src="images/deployment_m.jpg">
+            </section>
+
+        </section>
+
+        <section>
+            <h1>Le retour d'expérience</h1>
+        </section>
+        <section>
+            <section>
+                <h2>Les avantages de la solution : NodeJS</h2>
+                <ul>
+                    <li>Déployable <b>partout</b>!</li>
+                    <li>Accessible depuis n'importe quel navigateur (moderne ;) )</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Les avantages de la solution : Couchbase</h2>
+                <ul>
+                    <li>NoSQL : adapté aux forts volumes</li>
+                    <li>Adapté à notre besoin : Write once, Read a lot</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Les avantages de la solution : ElasticSearch</h2>
+                <ul>
+                    <li>Utilisation extensive de facets : Une requête - toutes les données</li>
+                    <li>Gain de temps de traitement</li>
+                    <li>Peu de métier</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Les avantages de la solution : AngularsJS</h2>
+                <ul>
+                    <li>Création d'UI simplifiée</li>
+                    <li>Gain de temps de traitement</li>
+                    <li>Peu de métier</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Les incovénients/problèmes : Couchbase/ES</h2>
+                <ul>
+                    <li>Documents réfléchis pour ES</li>
+                    <li>Dupliqués entre CB et ES</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Les incovénients/problèmes : GCE</h2>
+                <ul>
+                    <li>Communication WPilot <-> Couchbase gourmande</li>
+                    <li>Nombre de ports ouverts sur GCE limité</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Les incovénients/problèmes : Industrialisation</h2>
+                <ul>
+                    <li>Minification non testée au fil de l'eau</li>
+                    <li>Conflit de dépendances entre les librairies</li>
+                    <li>Bugs natifs des librairies</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Les incovénients/problèmes : Performances</h2>
+                <ul>
+                    <li>Latence le jour J : Jeu presque injouable</li>
+                    <li>Gestion du cache "à la main"</li>
+                </ul>
+            </section>
+
+        </section>
+    </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            } },
+            { src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } }
+        ]
+    });
+
+</script>
+
+</body>
+</html>
