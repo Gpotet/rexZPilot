@@ -38,9 +38,11 @@
 
             <h3>Un jeu présenté lors du DevFest 2013 pour Zenika</h3>
 
+<!-- Non nécessaire selon moi
             <p>
                 <small>Réalisé par Manuel Boillod, Pierre Reliquet et Germain Potet</small>
             </p>
+            -->
         </section>
         <section>
             <section>
@@ -185,6 +187,25 @@
                     <li>Peu de métier</li>
                 </ul>
             </section>
+		    <section>
+                <h2>Les avantages de la solution : UI Javascript</h2>
+                <ul>
+					<li>D3.js
+						<ul>
+							<li>Une librairie complète</li>
+							<li>Tous types de graphiques</li>
+							<li>De nombreuses surcouches existantes</li>
+						</ul>            
+					</li>
+					<li>elastic.js
+						<ul>
+							<li>Communication simplissime entre JS et ES</li>
+							<li>Abstraction des requêtes</li>
+						</ul>            
+					</li>
+					<li>underscore.js : librairie complète et indispensable</li>
+                </ul>
+            </section>
         </section>
         <section>
             <section>
@@ -214,6 +235,27 @@
                 <ul>
                     <li>Latence le jour J : Jeu presque injouable</li>
                     <li>Gestion du cache "à la main"</li>
+                </ul>
+            </section>
+             <section>
+                <h2>Les inconvénients de la solution : D3.js</h2>
+                <ul>
+                    <li>Une API native complexe</li>
+                    
+                    <li>De nombreuses surcouches existantes</li>
+                </ul>
+            </section>
+			<section>
+                <h2>Les inconvénients de la solution : UI Javascript</h2>
+                <ul>
+					<li>D3.js
+						<ul>
+							<li>Une API native complexe</li>
+							<li>Des effets consommateurs de ressources</li>
+						</ul>            
+					</li>
+					<li>Trop de données + Trop de graphes => lenteur pour le navigateur client</li>
+					<li>Beaucoup (trop) de librairies => dont certaines buggées : <a href="https://github.com/cmaurer/angularjs-nvd3-directives">angularjs-nvd3-directives</a>...</li>
                 </ul>
             </section>
 
